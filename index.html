@@ -24,7 +24,19 @@
    
   <body>
     <h1><b>About Me</b></h1>
-    <img src="profilepic.jpg" alt="This is me!" style="width:400px;height:440px;">
+    <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0"
+          src="profilepic.jpg" alt="This is me!" style="width:400px;height:440px;">
+    <script>
+    function bigImg(x) {
+    x.style.height = "64px";
+    x.style.width = "64px";
+                   }
+
+    function normalImg(x) {
+    x.style.height = "32px";
+    x.style.width = "32px";
+                        }
+</script>
     <br/>
     <button onclick="alertButton()">Click on me!</button>
     <script>
